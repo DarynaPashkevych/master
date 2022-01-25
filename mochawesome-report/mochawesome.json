@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-25T22:37:14.008Z",
+    "end": "2022-01-25T22:37:23.027Z",
+    "duration": 9019,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8388c852-3aea-4ceb-8b05-e444381b3019",
+      "title": "",
+      "fullFile": "cypress/integration/test.spec.js",
+      "file": "cypress/integration/test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d196c034-00e5-477d-8489-c4713e44971b",
+          "title": "User should be able",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "to log in",
+              "fullTitle": "User should be able to log in",
+              "timedOut": null,
+              "duration": 1522,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const login = new _Login.default();\nlogin.navigate();\nlogin.enterUsername('qa_user');\nlogin.enterPassword('pAss1235');\nlogin.submit();\ncy.get('.has-error > .help-block').should('have.text', \"No account found with that username.\");",
+              "err": {},
+              "uuid": "069f76e4-e14c-4d64-9f66-dcf38cc153b4",
+              "parentUUID": "d196c034-00e5-477d-8489-c4713e44971b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "069f76e4-e14c-4d64-9f66-dcf38cc153b4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1522,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2e0c9471-959f-4a03-bdc1-ac5d3f3f1617",
+          "title": "User can't log in without entering username and password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays form",
+              "fullTitle": "User can't log in without entering username and password displays form",
+              "timedOut": null,
+              "duration": 313,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const login = new _Login.default();\nlogin.navigate();\nlogin.submit();\ncy.get(':nth-child(1) > .help-block').should('contain', 'Please enter username.');\ncy.get(':nth-child(2) > .help-block').should('contain', 'Please enter your password.');",
+              "err": {},
+              "uuid": "10909761-07ab-4fbf-84cc-cc8ac28fe549",
+              "parentUUID": "2e0c9471-959f-4a03-bdc1-ac5d3f3f1617",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10909761-07ab-4fbf-84cc-cc8ac28fe549"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 313,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "af5aa1f1-f1d9-4bc3-a838-ca1d2cd011a8",
+          "title": "User can't log in without entering username",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays form",
+              "fullTitle": "User can't log in without entering username displays form",
+              "timedOut": null,
+              "duration": 558,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const login = new _Login.default();\nlogin.navigate();\nlogin.enterPassword('pAss1235');\nlogin.submit();\ncy.get(':nth-child(1) > .help-block').should('contain', 'Please enter username.');",
+              "err": {},
+              "uuid": "d62598c2-2f59-4a77-bf23-4640088218a9",
+              "parentUUID": "af5aa1f1-f1d9-4bc3-a838-ca1d2cd011a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d62598c2-2f59-4a77-bf23-4640088218a9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "cb992729-3342-4a6e-97c0-84cbbf54c8c9",
+          "title": "User can't log in without entering password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays form",
+              "fullTitle": "User can't log in without entering password displays form",
+              "timedOut": null,
+              "duration": 556,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const login = new _Login.default();\nlogin.navigate();\nlogin.enterUsername('qa_user');\nlogin.submit();\ncy.get(':nth-child(2) > .help-block').should('contain', 'Please enter your password.');",
+              "err": {},
+              "uuid": "ba7c1f88-2483-48c9-a658-218d1e3539a0",
+              "parentUUID": "cb992729-3342-4a6e-97c0-84cbbf54c8c9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ba7c1f88-2483-48c9-a658-218d1e3539a0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 556,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "37f77f1e-2f1f-4cce-874c-37d6b079c217",
+          "title": "User can log in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays user page",
+              "fullTitle": "User can log in displays user page",
+              "timedOut": null,
+              "duration": 4244,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\test.spec.js\\\\User can log in -- displays user page (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get('.user-page').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-page`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.user-page`, but never found it.\n    at Context.eval (https://www.pecodesoftware.com/__cypress/tests?p=cypress\\integration\\test.spec.js:206:26)",
+                "diff": null
+              },
+              "uuid": "4b751d7c-bb87-4f5f-b525-56d4d9122407",
+              "parentUUID": "37f77f1e-2f1f-4cce-874c-37d6b079c217",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4b751d7c-bb87-4f5f-b525-56d4d9122407"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 4244,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}
